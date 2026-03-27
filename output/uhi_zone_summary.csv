@@ -1,0 +1,4 @@
+zone,avg_day_temp_C,avg_night_temp_C,avg_ndvi
+Vegetated,27.97,22.49,0.4735
+Dense Vegetation,27.49,23.14,0.633
+Urban-Suburban,26.91,21.49,0.325

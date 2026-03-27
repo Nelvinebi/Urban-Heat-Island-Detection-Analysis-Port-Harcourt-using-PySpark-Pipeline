@@ -1,0 +1,5 @@
+season,avg_day_temp_C,avg_night_temp_C,avg_ndvi
+Early Rains (Mar-May),28.66,22.75,0.4662
+Dry Season (Dec-Feb),27.78,22.38,0.4179
+Late Rains (Sep-Nov),27.42,21.92,0.4071
+Peak Rains (Jun-Aug),26.17,21.22,0.3597
