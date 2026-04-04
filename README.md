@@ -1,4 +1,4 @@
-# 🌆 Urban Heat Island Detection & Analysis — Port Harcourt
+# 🌆 Urban Heat Island Detection & Analysis Port Harcourt
 
 A scalable big data pipeline for detecting and analyzing Urban Heat Island (UHI) effects in Port Harcourt, Nigeria, using Apache PySpark and real satellite datasets.
 
@@ -32,15 +32,14 @@ UHI_PortHarcourt/
 ├── uhi_pipeline_v2.py                    # Main PySpark UHI pipeline
 ├── requirements.txt                      # Python dependencies
 │
-├── output/
-│   ├── uhi_monthly_analysis.csv          # Full monthly dataset
-│   ├── uhi_seasonal_summary.csv          # Temps by season
-│   ├── uhi_yearly_trend.csv              # Temps by year (2020–2024)
-│   ├── uhi_zone_summary.csv              # Temps by vegetation zone
-│   ├── uhi_hotspots.csv                  # Top 10 hottest months
-│   └── ghsl_urban_structure.csv          # Urban coverage breakdown
-│
-└── uhi_dashboard.html                    # Interactive visualization dashboard
+└── output/
+    ├── uhi_monthly_analysis.csv          # Full monthly dataset
+    ├── uhi_seasonal_summary.csv          # Temps by season
+    ├── uhi_yearly_trend.csv              # Temps by year (2020–2024)
+    ├── uhi_zone_summary.csv              # Temps by vegetation zone
+    ├── uhi_hotspots.csv                  # Top 10 hottest months
+    └── ghsl_urban_structure.csv          # Urban coverage breakdown
+
 ```
 
 ---
