@@ -31,6 +31,7 @@ UHI_PortHarcourt/
 ├── ghsl_converter.py                     # Converts GHSL GeoTIFF → CSV
 ├── uhi_pipeline_v2.py                    # Main PySpark UHI pipeline
 ├── requirements.txt                      # Python dependencies
+├── streamlit_app.py                      # Interactive dashboard
 │
 └── output/
     ├── uhi_monthly_analysis.csv          # Full monthly dataset
