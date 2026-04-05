@@ -117,16 +117,16 @@ All data is sourced from **real satellite observations** no synthetic data is us
 
 ## 📊 Key Features
 
-- ✅ **Real NASA satellite data** — 6 years (2019–2024) of MODIS MOD11A2 LST and MOD13A2 NDVI at 1 km resolution, sourced from NASA AppEEARS
-- ✅ **Scalable PySpark pipeline** — fully distributed processing using SparkSession DataFrames, joins, aggregations, and window operations — ready to scale to larger spatial extents
-- ✅ **Multi-source data fusion** — MODIS LST (8-day) + NDVI (16-day) + GHSL built-up (GeoTIFF) merged into a unified monthly analytical dataset
-- ✅ **NDVI-based urban zone classification** — four heat zones (High Urban → Urban-Suburban → Vegetated → Dense Vegetation) using NDVI thresholds, validated against GHSL urban structure
-- ✅ **UHI Index computation** — quantified inverse UHI of −1.05°C (urban cooler than vegetated), attributed to Port Harcourt's coastal humidity and oceanic moderation
-- ✅ **Four-season climatological analysis** — Early Rains (Mar–May), Dry Season (Dec–Feb), Late Rains (Sep–Nov), Peak Rains (Jun–Aug) — revealing pre-rain heat buildup as the dominant thermal driver
-- ✅ **Diurnal Temperature Range (DTR) tracking** — day-night spread narrowed from 7.9°C (2019) to 4.4°C (2024), signalling increased nocturnal heat retention
-- ✅ **10 publication-ready visualisations** — zone comparison, yearly trend, seasonal patterns, hotspot ranking, NDVI decline, urban coverage donut, pipeline architecture, temperature-vegetation scatter, DTR trend, monthly heat calendar
-- ✅ **Interactive Streamlit dashboard** — 5-tab web app with Plotly charts, Folium map with neighbourhood markers, and embedded KPI metrics
-- ✅ **Full CSV export** — 6 analysis outputs (monthly, seasonal, yearly, zone, hotspot, GHSL urban structure) for downstream use
+- ✅ **Real NASA satellite data:** 6 years (2019–2024) of MODIS MOD11A2 LST and MOD13A2 NDVI at 1 km resolution, sourced from NASA AppEEARS
+- ✅ **Scalable PySpark pipeline:** fully distributed processing using SparkSession DataFrames, joins, aggregations, and window operations ready to scale to larger spatial extents
+- ✅ **Multi-source data fusion:** MODIS LST (8-day) + NDVI (16-day) + GHSL built-up (GeoTIFF) merged into a unified monthly analytical dataset
+- ✅ **NDVI-based urban zone classification:** four heat zones (High Urban → Urban-Suburban → Vegetated → Dense Vegetation) using NDVI thresholds, validated against GHSL urban structure
+- ✅ **UHI Index computation:** quantified inverse UHI of −1.05°C (urban cooler than vegetated), attributed to Port Harcourt's coastal humidity and oceanic moderation
+- ✅ **Four-season climatological analysis:** Early Rains (Mar–May), Dry Season (Dec–Feb), Late Rains (Sep–Nov), Peak Rains (Jun–Aug) — revealing pre-rain heat buildup as the dominant thermal driver
+- ✅ **Diurnal Temperature Range (DTR) tracking:** day-night spread narrowed from 7.9°C (2019) to 4.4°C (2024), signalling increased nocturnal heat retention
+- ✅ **10 publication-ready visualisations:** zone comparison, yearly trend, seasonal patterns, hotspot ranking, NDVI decline, urban coverage donut, pipeline architecture, temperature-vegetation scatter, DTR trend, monthly heat calendar
+- ✅ **Interactive Streamlit dashboard:** 5-tab web app with Plotly charts, Folium map with neighbourhood markers, and embedded KPI metrics
+- ✅ **Full CSV export:** 6 analysis outputs (monthly, seasonal, yearly, zone, hotspot, GHSL urban structure) for downstream use
 
 ---
 
@@ -140,7 +140,7 @@ All data is sourced from **real satellite observations** no synthetic data is us
 ---
 
 ### 🔹 Yearly Temperature Trend — The Cooling-Vegetation Paradox
-> Daytime temperature declined 2.52°C (29.57°C → 27.05°C) from 2019 to 2024, even as NDVI dropped 25.9% — suggesting increased cloud cover and coastal dynamics outweigh surface vegetation effects
+> Daytime temperature declined 2.52°C (29.57°C → 27.05°C) from 2019 to 2024, even as NDVI dropped 25.9% suggesting increased cloud cover and coastal dynamics outweigh surface vegetation effects
 
 ![Yearly Temperature Trend](https://github.com/Nelvinebi/Urban-Heat-Island-Detection-Analysis-Port-Harcourt-using-PySpark-Pipeline/blob/main/visualization/02_yearly_temperature_trend.png)
 
@@ -153,21 +153,21 @@ All data is sourced from **real satellite observations** no synthetic data is us
 
 ---
 
-### 🔹 Top 10 Hottest Months — 2020 Heat Cluster
+### 🔹 Top 10 Hottest Months; 2020 Heat Cluster
 > April 2020 is the all-time peak at 31.18°C. Four of the top 10 hottest months occurred in 2020, making it the most thermally intense year; three months (Apr/Mar 2020, Apr 2021) exceeded the 30°C threshold
 
 ![Hotspots 2020 Cluster](https://github.com/Nelvinebi/Urban-Heat-Island-Detection-Analysis-Port-Harcourt-using-PySpark-Pipeline/blob/main/visualization/04_hotspots_2020_cluster.png)
 
 ---
 
-### 🔹 Vegetation Decline (NDVI) — 2019–2024
+### 🔹 Vegetation Decline (NDVI) 2019–2024
 > NDVI fell from 0.5635 (2019) to 0.4174 (2024), a 25.9% reduction in vegetation cover — clear evidence of ongoing urbanisation and land-use conversion despite the paradoxical cooling in surface temperatures
 
 ![NDVI Decline Trend](https://github.com/Nelvinebi/Urban-Heat-Island-Detection-Analysis-Port-Harcourt-using-PySpark-Pipeline/blob/main/visualization/05_ndvi_decline_trend.png)
 
 ---
 
-### 🔹 Urban Land Classification — GHSL Donut Chart
+### 🔹 Urban Land Classification; GHSL Donut Chart
 > 56.97% of the study area (34,468 pixels) is built-up; High Urban alone accounts for 30.0% (18,156 pixels) with an average built-up surface of 4,281 m² per pixel, confirming Port Harcourt's dense urban footprint
 
 ![Urban Coverage Donut](https://github.com/Nelvinebi/Urban-Heat-Island-Detection-Analysis-Port-Harcourt-using-PySpark-Pipeline/blob/main/visualization/06_urban_coverage_donut.png)
@@ -181,7 +181,7 @@ All data is sourced from **real satellite observations** no synthetic data is us
 
 ---
 
-### 🔹 Temperature vs Vegetation Scatter — Inverse Correlation
+### 🔹 Temperature vs Vegetation Scatter; Inverse Correlation
 > Scatter plot of monthly NDVI vs daytime LST coloured by zone classification; the positive trend line (slope: 5.2) confirms that vegetated areas are warmer — the hallmark of Port Harcourt's coastal inverse UHI. Peak: 31.2°C (April 2020)
 
 ![Temperature vs NDVI Scatter](https://github.com/Nelvinebi/Urban-Heat-Island-Detection-Analysis-Port-Harcourt-using-PySpark-Pipeline/blob/main/visualization/08_temp_ndvi_scatter.png)
@@ -255,7 +255,7 @@ All data is sourced from **real satellite observations** no synthetic data is us
 - 🔍 **2020 heat cluster:** Four of the top 10 hottest months occurred in 2020 (Feb, Mar, Apr, May), with three breaching 30°C; likely linked to a suppressed wet season onset and reduced cloud shielding that year
 - 🔍 **Pre-rain heat buildup dominates:** Early Rains (Mar–May) at 28.66°C is consistently the hottest season — as humidity rises but rainfall has yet to begin, sensible heat flux peaks before clouds and precipitation moderate temperatures through the June–August peak rainy season
 - 🔍 **DTR compression signals urban heat retention:** The day-night temperature gap narrowed from 7.9°C to 4.4°C over six years — as built-up surfaces and impervious cover increase, nocturnal radiative cooling slows, narrowing the diurnal range even as daytime temperatures trend downward
-- 🔍 **56.97% urban coverage:** Over half the study area is classified as built-up by GHSL, with 30.0% in the High Urban class (avg 4,281 m² built-up surface per pixel) — confirming Port Harcourt as one of Nigeria's most intensely urbanised coastal cities
+- 🔍 **56.97% urban coverage:** Over half the study area is classified as built-up by GHSL, with 30.0% in the High Urban class (avg 4,281 m² built-up surface per pixel) confirming Port Harcourt as one of Nigeria's most intensely urbanised coastal cities
 - 🔍 **NDVI trough in 2022 (0.3613):** Vegetation hit its lowest recorded value in 2022, coinciding with October 2022 appearing in the top 10 hottest months and the lowest annual average night temperature (21.36°C) — suggesting a particularly stressed dry-vegetation year
 
 ---
@@ -265,11 +265,11 @@ All data is sourced from **real satellite observations** no synthetic data is us
 📊 **[View the Interactive Streamlit Dashboard →](https://7an7zrltefttuauc5cqwec.streamlit.app/)**
 
 The dashboard features 5 interactive tabs:
-- **Overview** — KPI cards (UHI index, peak temp, urban coverage, NDVI trend) + zone comparison + urban donut
-- **Temporal** — Yearly trend with dual-axis NDVI overlay + seasonal comparison charts
-- **Spatial** — Hotspot rankings + temperature-NDVI scatter coloured by zone
-- **Hotspots** — Top 10 hottest months table + 2020 heat cluster analysis
-- **Map** — Interactive Folium map of Port Harcourt with neighbourhood temperature markers
+- **Overview:** KPI cards (UHI index, peak temp, urban coverage, NDVI trend) + zone comparison + urban donut
+- **Temporal:** Yearly trend with dual-axis NDVI overlay + seasonal comparison charts
+- **Spatial:** Hotspot rankings + temperature-NDVI scatter coloured by zone
+- **Hotspots:** Top 10 hottest months table + 2020 heat cluster analysis
+- **Map:** Interactive Folium map of Port Harcourt with neighbourhood temperature markers
 
 ---
 
@@ -320,8 +320,8 @@ The dashboard features 5 interactive tabs:
 
 ```bash
 # Python 3.9+
-# Java 17 (required for PySpark) — download from: https://adoptium.net/temurin/releases/
-# Set JAVA_HOME environment variable (Windows — run as Administrator):
+# Java 17 (required for PySpark) download from: https://adoptium.net/temurin/releases/
+# Set JAVA_HOME environment variable (Windows run as Administrator):
 setx JAVA_HOME "C:\Program Files\Eclipse Adoptium\jdk-17.0.xx-hotspot" /M
 ```
 
@@ -389,6 +389,7 @@ altair>=5.0.0
 - 🤖 Apply **deep learning** (U-Net / CNN) to segment LST hotspots spatially and predict future heat stress zones under urbanisation scenarios
 
 ---
+<div align="center">
 
 ## 👤 Author
 
@@ -401,6 +402,8 @@ altair>=5.0.0
 [![GitHub](https://img.shields.io/badge/GitHub-Nelvinebi-181717?style=flat-square&logo=github)](https://github.com/Nelvinebi)
 [![Email](https://img.shields.io/badge/Email-nelvinebingiye%40gmail.com-D14836?style=flat-square&logo=gmail)](mailto:nelvinebingiye@gmail.com)
 [![Streamlit Apps](https://img.shields.io/badge/Streamlit%20Apps-FF4B4B?style=flat-square&logo=streamlit)](https://share.streamlit.io/user/nelvinebi)
+
+</div>
 
 ---
 
