@@ -1,4 +1,4 @@
-# 🌆 Urban Heat Island Detection & Analysis — Port Harcourt, Nigeria
+# 🌆 Urban Heat Island Detection & Analysis Port Harcourt, Nigeria
 
 <div align="center">
 
@@ -87,14 +87,14 @@ All data is sourced from **real satellite observations** no synthetic data is us
 ## 🛠️ Tools & Technologies
 
 - **Language:** Python 3.9+
-- **Distributed Computing:** Apache PySpark 3.5 — SparkSession, DataFrames, distributed SQL aggregations
-- **Geospatial Processing:** Rasterio — GeoTIFF reprojection, pixel extraction, CRS transformation
+- **Distributed Computing:** Apache PySpark 3.5 SparkSession, DataFrames, distributed SQL aggregations
+- **Geospatial Processing:** Rasterio GeoTIFF reprojection, pixel extraction, CRS transformation
 - **Data Processing:** Pandas, NumPy
 - **Visualisation:** Plotly (interactive charts), Folium (interactive map), Matplotlib/Seaborn (static charts)
 - **Dashboard:** Streamlit — multi-tab interactive web dashboard
 - **Satellite Data Access:** NASA AppEEARS API (MODIS), EU GHSL Portal
 - **UHI Classification:** NDVI threshold-based zone classification + GHSL built-up surface integration
-- **Prerequisites:** Java 17 (Eclipse Temurin JDK — required for PySpark)
+- **Prerequisites:** Java 17 (Eclipse Temurin JDK required for PySpark)
 
 ---
 
@@ -161,7 +161,7 @@ All data is sourced from **real satellite observations** no synthetic data is us
 ---
 
 ### 🔹 Vegetation Decline (NDVI) 2019–2024
-> NDVI fell from 0.5635 (2019) to 0.4174 (2024), a 25.9% reduction in vegetation cover — clear evidence of ongoing urbanisation and land-use conversion despite the paradoxical cooling in surface temperatures
+> NDVI fell from 0.5635 (2019) to 0.4174 (2024), a 25.9% reduction in vegetation cover clear evidence of ongoing urbanisation and land-use conversion despite the paradoxical cooling in surface temperatures
 
 ![NDVI Decline Trend](https://github.com/Nelvinebi/Urban-Heat-Island-Detection-Analysis-Port-Harcourt-using-PySpark-Pipeline/blob/main/visualization/05_ndvi_decline_trend.png)
 
@@ -250,13 +250,13 @@ All data is sourced from **real satellite observations** no synthetic data is us
 
 ### Key Insights
 
-- 🔍 **Inverse UHI confirmed:** Urban zones (26.91°C) are 1.06°C cooler than Vegetated areas (27.97°C) — atypical of most tropical megacities, attributed to Port Harcourt's Atlantic coastal position, high relative humidity, and sea-breeze moderation of urban heat
+- 🔍 **Inverse UHI confirmed:** Urban zones (26.91°C) are 1.06°C cooler than Vegetated areas (27.97°C) typical of most tropical megacities, attributed to Port Harcourt's Atlantic coastal position, high relative humidity, and sea-breeze moderation of urban heat
 - 🔍 **The cooling-vegetation paradox:** Daytime temperature fell 2.52°C from 2019 to 2024 despite NDVI declining 25.9% — increased Atlantic cloud cover and oceanic cooling likely outweigh the warming effect of vegetation loss in this coastal environment
 - 🔍 **2020 heat cluster:** Four of the top 10 hottest months occurred in 2020 (Feb, Mar, Apr, May), with three breaching 30°C; likely linked to a suppressed wet season onset and reduced cloud shielding that year
 - 🔍 **Pre-rain heat buildup dominates:** Early Rains (Mar–May) at 28.66°C is consistently the hottest season — as humidity rises but rainfall has yet to begin, sensible heat flux peaks before clouds and precipitation moderate temperatures through the June–August peak rainy season
-- 🔍 **DTR compression signals urban heat retention:** The day-night temperature gap narrowed from 7.9°C to 4.4°C over six years — as built-up surfaces and impervious cover increase, nocturnal radiative cooling slows, narrowing the diurnal range even as daytime temperatures trend downward
+- 🔍 **DTR compression signals urban heat retention:** The day-night temperature gap narrowed from 7.9°C to 4.4°C over six years as built-up surfaces and impervious cover increase, nocturnal radiative cooling slows, narrowing the diurnal range even as daytime temperatures trend downward
 - 🔍 **56.97% urban coverage:** Over half the study area is classified as built-up by GHSL, with 30.0% in the High Urban class (avg 4,281 m² built-up surface per pixel) confirming Port Harcourt as one of Nigeria's most intensely urbanised coastal cities
-- 🔍 **NDVI trough in 2022 (0.3613):** Vegetation hit its lowest recorded value in 2022, coinciding with October 2022 appearing in the top 10 hottest months and the lowest annual average night temperature (21.36°C) — suggesting a particularly stressed dry-vegetation year
+- 🔍 **NDVI trough in 2022 (0.3613):** Vegetation hit its lowest recorded value in 2022, coinciding with October 2022 appearing in the top 10 hottest months and the lowest annual average night temperature (21.36°C) suggesting a particularly stressed dry-vegetation year
 
 ---
 
@@ -375,9 +375,9 @@ altair>=5.0.0
 **Current Limitations:**
 - MODIS LST at **1 km resolution** captures city-level patterns but misses intra-urban micro-scale heat variation (e.g., individual streets, rooftops, green spaces)
 - The study uses **area-averaged AppEEARS statistics** rather than pixel-level spatial grids, limiting the ability to produce full choropleth temperature maps
-- **NDVI-based zone classification** is a proxy for urbanisation — true land-use categories (industrial, residential, commercial) require additional ground-truth or higher-resolution data
-- **No atmospheric correction verification** — MODIS LST products from AppEEARS are preprocessed but emissivity assumptions for Port Harcourt's mixed coastal land cover may introduce systematic bias
-- The GHSL dataset reflects **2030 projected built-up** surface (R2023A), not annual snapshots — temporal dynamics of urban expansion within 2019–2024 are not fully captured
+- **NDVI-based zone classification** is a proxy for urbanisation true land-use categories (industrial, residential, commercial) require additional ground-truth or higher-resolution data
+- **No atmospheric correction verification** MODIS LST products from AppEEARS are preprocessed but emissivity assumptions for Port Harcourt's mixed coastal land cover may introduce systematic bias
+- The GHSL dataset reflects **2030 projected built-up** surface (R2023A), not annual snapshots temporal dynamics of urban expansion within 2019–2024 are not fully captured
 
 **Future Improvements:**
 - 🛰️ Integrate **Landsat 8/9 OLI-TIRS** (30 m resolution) to capture sub-kilometre LST variation and map heat at neighbourhood level
@@ -385,7 +385,7 @@ altair>=5.0.0
 - 📍 Add **point-level weather station validation** to ground-truth MODIS LST retrievals against in-situ temperature records from NIMET stations
 - 📉 Implement **time-series decomposition** (STL or Prophet) to separate long-term warming/cooling trends from seasonal and inter-annual variability
 - 🌱 Incorporate **Sentinel-2 NDVI** (10 m resolution) for higher-fidelity vegetation mapping and cross-validation with MODIS NDVI
-- 🏙️ Extend to **urban morphology metrics** — building density, sky-view factor, impervious surface fraction — to model UHI intensity from physical first principles
+- 🏙️ Extend to **urban morphology metrics** building density, sky-view factor, impervious surface fraction to model UHI intensity from physical first principles
 - 🤖 Apply **deep learning** (U-Net / CNN) to segment LST hotspots spatially and predict future heat stress zones under urbanisation scenarios
 
 ---
@@ -409,17 +409,17 @@ altair>=5.0.0
 
 ## 📄 License
 
-This project is licensed under the **MIT License** — free to use, adapt, and build upon for research, education, and environmental analytics.
+This project is licensed under the **MIT License** free to use, adapt, and build upon for research, education, and environmental analytics.
 See the [LICENSE](LICENSE) file for full details.
 
 ---
 
 ## 🙌 Acknowledgements
 
-- **NASA Earthdata / AppEEARS** — for providing open access to MODIS MOD11A2 (LST) and MOD13A2 (NDVI) satellite statistics
-- **EU Joint Research Centre (JRC)** — for the Global Human Settlement Layer (GHSL R2023A) built-up surface dataset
-- **Apache Spark** community — for the distributed computing framework powering the scalable pipeline
-- **Streamlit** — for enabling rapid interactive dashboard development and free cloud deployment
+- **NASA Earthdata / AppEEARS** for providing open access to MODIS MOD11A2 (LST) and MOD13A2 (NDVI) satellite statistics
+- **EU Joint Research Centre (JRC)** for the Global Human Settlement Layer (GHSL R2023A) built-up surface dataset
+- **Apache Spark** community for the distributed computing framework powering the scalable pipeline
+- **Streamlit** for enabling rapid interactive dashboard development and free cloud deployment
 - Research on Port Harcourt's UHI dynamics informed by published work from **Rivers State University Department of Urban and Regional Planning**
 
 ---
