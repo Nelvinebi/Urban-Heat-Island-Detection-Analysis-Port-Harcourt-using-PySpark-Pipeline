@@ -420,7 +420,6 @@ See the [LICENSE](LICENSE) file for full details.
 - **EU Joint Research Centre (JRC)** for the Global Human Settlement Layer (GHSL R2023A) built-up surface dataset
 - **Apache Spark** community for the distributed computing framework powering the scalable pipeline
 - **Streamlit** for enabling rapid interactive dashboard development and free cloud deployment
-- Research on Port Harcourt's UHI dynamics informed by published work from **Rivers State University Department of Urban and Regional Planning**
 
 ---
 
